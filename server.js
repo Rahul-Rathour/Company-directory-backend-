@@ -5,6 +5,11 @@ const path = require("path");
 
 const app = express();
 app.use(cors());
+app.use(cors({
+  origin: "*",
+  methods: ["GET"],
+}));
+
 app.use(express.json());
 
 // Load JSON file
